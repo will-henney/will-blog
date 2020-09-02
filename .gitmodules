@@ -1,3 +1,7 @@
-[submodule "blog/themes/color-your-world"]
-	path = blog/themes/color-your-world
+[submodule "themes/color-your-world"]
+	path = themes/color-your-world
 	url = https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git
+[submodule "public"]
+	path = public
+	url = https://github.com/will-henney/will-henney.github.io.git
+	branch = master
