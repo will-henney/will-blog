@@ -1,0 +1,56 @@
+* will-henney.github.io
+Will Henney's personal website
+
+** How to write
++ Blog entries are in [[file:blog.org]] as second-level headings
+  + They must have an ~EXPORT_FILE_NAME~ property, and ought to have a ~EXPORT_DATE~ too. 
+  + Everything under that heading and all is sub-headings is included in the post
+
+** How to publish
+
+*** Org files to markdown with ox-hugo
++ Type ~C-c C-e H H~ to export a single post
++ Or ~C-c C-e H A~ to re-export entire file
++ [X] Alternatively, we could add 
+  #+begin_src emacs-lisp
+    # Local Variables:
+    # eval: (org-hugo-auto-export-mode)
+    # End:
+  #+end_src
+  to the end of ~blog.org~ so that files are exported on save.
+  + [X] Or even use ~.dir-locals.el~
+  + That is what I have done - /however/ there is a gotcha, since it turns out that it will only export the entry that you are in at the time you so ~C-x C-s~, unless you move point outside of all the entries first (e.g., go to top-level heading)
+
+*** Markdown to static html + css with hugo
++ First test on a local server:
+  #+begin_src sh
+    hugo server -D --navigateToChanged
+  #+end_src
+  + That will give you an address like http://localhost:1313 where you can look at your site
+  + Editing and saving/exporting the org files (or any config files) causes the site to auto-refresh
++ When ready to deploy, generate the static HTML with 
+  #+begin_src sh
+  hugo
+  #+end_src
+*** Push static site to Github pages
+To push the static site itself 
+#+begin_src sh
+sh ./deploy.sh 
+#+end_src
+
+This is based on the [[https://gohugo.io/hosting-and-deployment/hosting-on-github/][Hugo docs]]
+
+
+
+** Configuring the site
+
+*** The theme
+
+*** DNS forwarding from my personal domain
+
+Quote from Hugo docs
+
+: If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
+
+
+
