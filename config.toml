@@ -3,6 +3,21 @@ languageCode = "en-us"
 title = "Ionized Space"
 theme = "color-your-world"
 
+canonifyURLs = true
+
+enableEmoji = true
+enableGitInfo = true
+
+
+enableInlineShortCodes = true
+
+# This is necessary so that HTML and shortcodes work - see
+# https://ox-hugo.scripter.co/doc/goldmark/
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # This is *necessary* for ox-hugo to work well with Hugo 0.60.0+
 
 ## Setup for "color-your-world" theme
 [params]
@@ -47,6 +62,12 @@ markupImgClass = "borderless"
 # matter or disable it entirely by commenting the line below
 titleSeparator = "|"
 
+
+[Params.source]
+url = "https://github.com/will-henney/will-blog.git"   # Needed if you want to see .GitInfo for a page
+md_dir = "content"                   # Needed if you want to get a link to Markdown source for each page
+org_dir = "content-org"              # Needed if you want to get a link to the Org source (e.g. when using ox-hugo!)
+    
 [params.search]
 
 # Enable search form (at the post list)

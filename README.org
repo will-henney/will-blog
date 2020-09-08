@@ -5,6 +5,37 @@ Will Henney's personal website
 + Blog entries are in [[file:blog.org]] as second-level headings
   + They must have an ~EXPORT_FILE_NAME~ property, and ought to have a ~EXPORT_DATE~ too. 
   + Everything under that heading and all is sub-headings is included in the post
+*** DONE Using bundles
+CLOSED: [2020-09-07 Mon 23:24]
++ Inspired by what is in [[https://gitlab.com/kaushalmodi/kaushalmodi.gitlab.io/-/blob/master/content-org/scripter-posts.org][content-org/scripter-posts.org]] in Kaushal Modi's blog
++ This puts all the resources in a folder with the markdown file - neater organization
++ And seems more reliable
+*** DONE Inline images
+CLOSED: [2020-09-07 Mon 23:24]
++ Images in the same folder just work
+  + *No* they don't work any more
+  + *Yes* they are working again
+    + Now that I am using bundles
++ Images in a subdir
+  + Also works
+** [1/1] DEBUGGING
+#+begin_example
+  $ hugo env    
+  Hugo Static Site Generator v0.74.3/extended darwin/amd64 BuildDate: unknown
+  GOOS="darwin"
+  GOARCH="amd64"
+  GOVERSION="go1.14.5"
+#+end_example
++ [X] Images don't work
+  + I don't understand why, but switching to bundles fixed everything
+  + Get converted in the ~.md~ file to a shortcode like 
+    : {{< figure src="/ox-hugo/hh-625.png" caption="Figure 1: HH 625" >}}
+  + But this is ignored in the HTML - why?
+  + I have tried adding all sorts of stuff to [[file:config.toml]] but all to no avail:
+    + ~unsafe = True~
+    + ~enableInlineShortCodes = true~
+    + etc
+  + I am going to try out the ox-hugo example site, to see what is going wrong
 
 ** How to publish
 
@@ -45,12 +76,43 @@ This is based on the [[https://gohugo.io/hosting-and-deployment/hosting-on-githu
 ** Configuring the site
 
 *** The theme
++ I copied a load of stuff into [[file:config.toml]] but I can't say I really understand it all yet
 
-*** DNS forwarding from my personal domain
+*** DONE DNS forwarding from my personal domain
+CLOSED: [2020-09-03 Thu 13:54]
 
-Quote from Hugo docs
++ Quote from Hugo docs
+  : If you’d like to use a custom domain for your GitHub Pages site,
+  : create a file static/CNAME. Your custom domain name should be the only
+  : contents inside CNAME. Since it’s inside static, the published site
+  : will contain the CNAME file at the root of the published site, which
+  : is a requirements of GitHub Pages.
++ Amazingly, this worked perfectly the first time.
+  + Site at https://ionized.space
 
-: If you’d like to use a custom domain for your GitHub Pages site, create a file static/CNAME. Your custom domain name should be the only contents inside CNAME. Since it’s inside static, the published site will contain the CNAME file at the root of the published site, which is a requirements of GitHub Pages.
 
+*** TODO Minimal analytics
++ I signed up for Google Analytics account
+  + User name: will-henney
+  + [[https://analytics.google.com/analytics/web/provision/#/a177216759w245330663p228172507/admin/tracking/tracking-code/][My Google Analytics Dashboard]]
+  + This wants me to embed a thing called ~gtag.js~
+    + This is their new analytics system: [[https://developers.google.com/gtagjs][Global Site Tag]]
++ /However/, a better bet might be something simpler:
+  + https://minimalanalytics.com
+  + *Quotes from that site*
+    + Minimal Google Analytics Snippet
+      + A simple snippet for tracking page views on your website without having to add external libraries. Also works for single page applications made with the likes of react and vue.js.
+    + Before
+      + Google Tag Manager + Analytics = 73kB
+    + After
+      + Snippet = 1.5kB
+    + How does this work?
+      + This snippet sends page views directly to the Google Analytics API. There is no need to add the Google Tag Manager and Analytics libraries anymore. That not only saves bandwidth, it can also have a huge positive impact on the loading speed of your website. You should not use this if you want to use advanced features like tracking AdWords.
+    + Setup:
+      + Just put the snippet into your html, replace 'XX-XXXXXXXXX-X' with your tracking id and you're ready to go. You can also add options for what information you want to track.
+#+begin_src javascript
+  Event: ma.trackEvent('Category', 'Action', 'Label', 'Value')
+  Exception: ma.trackException('Description', 'Fatal')
+#+end_src
 
 

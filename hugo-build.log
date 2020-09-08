@@ -1,0 +1,48 @@
+INFO 2020/09/07 21:11:06 Using config file: 
+INFO 2020/09/07 21:11:06 syncing static files to /Users/will/Dropbox/will-blog/public/
+DEBUG 2020/09/07 21:11:06 Render page Will's new blog to "/posts/first-post/index.html"
+DEBUG 2020/09/07 21:11:06 Render page Tags to "/tags/index.html"
+DEBUG 2020/09/07 21:11:06 Render page Ionized Space to "/index.html"
+DEBUG 2020/09/07 21:11:06 Render page Categories to "/categories/index.html"
+DEBUG 2020/09/07 21:11:06 Render page emacs to "/tags/emacs/index.html"
+DEBUG 2020/09/07 21:11:06 Render page Posts to "/posts/index.html"
+DEBUG 2020/09/07 21:11:06 Render page meta to "/tags/meta/index.html"
+DEBUG 2020/09/07 21:11:06 Render page A test post with an image to "/posts/test-with-image/index.html"
+DEBUG 2020/09/07 21:11:06 creating alias: /page/1/index.html redirecting to https://ionized.space/
+DEBUG 2020/09/07 21:11:06 creating alias: /posts/page/1/index.html redirecting to https://ionized.space/posts/
+DEBUG 2020/09/07 21:11:06 creating alias: /tags/emacs/page/1/index.html redirecting to https://ionized.space/tags/emacs/
+DEBUG 2020/09/07 21:11:06 creating alias: /tags/meta/page/1/index.html redirecting to https://ionized.space/tags/meta/
+DEBUG 2020/09/07 21:11:06 Render XML for "sitemap" to "/sitemap.xml"
+DEBUG 2020/09/07 21:11:06 Render 404 page to "/404.html"
+DEBUG 2020/09/07 21:11:06 Render page Ionized Space to "/index.xml"
+DEBUG 2020/09/07 21:11:06 Render page Categories to "/categories/index.xml"
+DEBUG 2020/09/07 21:11:06 Render page Posts to "/posts/index.xml"
+DEBUG 2020/09/07 21:11:06 Render page Tags to "/tags/index.xml"
+DEBUG 2020/09/07 21:11:06 Render page emacs to "/tags/emacs/index.xml"
+DEBUG 2020/09/07 21:11:06 Render page meta to "/tags/meta/index.xml"
+INFO 2020/09/07 21:13:41 Using config file: 
+INFO 2020/09/07 21:13:41 syncing static files to /Users/will/Dropbox/will-blog/public/
+INFO 2020/09/07 21:33:59 Using config file: 
+INFO 2020/09/07 21:33:59 syncing static files to /Users/will/Dropbox/will-blog/public/
+INFO 2020/09/07 21:34:10 Using config file: 
+INFO 2020/09/07 21:34:10 syncing static files to /Users/will/Dropbox/will-blog/public/
+DEBUG 2020/09/07 21:34:10 Render page Tags to "/tags/index.html"
+DEBUG 2020/09/07 21:34:10 Render page A test post with an image to "/posts/test-with-image/index.html"
+DEBUG 2020/09/07 21:34:10 Render page Will's new blog to "/posts/first-post/index.html"
+DEBUG 2020/09/07 21:34:10 Render page Categories to "/categories/index.html"
+DEBUG 2020/09/07 21:34:10 Render page Ionized Space to "/index.html"
+DEBUG 2020/09/07 21:34:10 Render page meta to "/tags/meta/index.html"
+DEBUG 2020/09/07 21:34:10 Render page emacs to "/tags/emacs/index.html"
+DEBUG 2020/09/07 21:34:10 Render page Posts to "/posts/index.html"
+DEBUG 2020/09/07 21:34:10 creating alias: /page/1/index.html redirecting to https://ionized.space/
+DEBUG 2020/09/07 21:34:10 creating alias: /tags/emacs/page/1/index.html redirecting to https://ionized.space/tags/emacs/
+DEBUG 2020/09/07 21:34:10 creating alias: /posts/page/1/index.html redirecting to https://ionized.space/posts/
+DEBUG 2020/09/07 21:34:10 creating alias: /tags/meta/page/1/index.html redirecting to https://ionized.space/tags/meta/
+DEBUG 2020/09/07 21:34:10 Render XML for "sitemap" to "/sitemap.xml"
+DEBUG 2020/09/07 21:34:10 Render 404 page to "/404.html"
+DEBUG 2020/09/07 21:34:10 Render page Ionized Space to "/index.xml"
+DEBUG 2020/09/07 21:34:10 Render page Categories to "/categories/index.xml"
+DEBUG 2020/09/07 21:34:10 Render page Posts to "/posts/index.xml"
+DEBUG 2020/09/07 21:34:10 Render page emacs to "/tags/emacs/index.xml"
+DEBUG 2020/09/07 21:34:10 Render page meta to "/tags/meta/index.xml"
+DEBUG 2020/09/07 21:34:10 Render page Tags to "/tags/index.xml"
