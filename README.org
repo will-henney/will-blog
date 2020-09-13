@@ -116,3 +116,24 @@ CLOSED: [2020-09-03 Thu 13:54]
 #+end_src
 
 
+**** How to get JS onto all the pages
++ I need to copy some of the templates from the theme ~theme/THEME_NAME/layouts/~ to my own ~layouts/~ folder. For instance,
+  + ~layouts/_default/baseof.html~ is the skeleton for every page
+  + ~layouts/partials/~ has a *lot* of complicated stuff in it
+    + ~head.html~ has all the ~<meta>~ tags and links that go in ~<head> ... </head>~
+      + Some of them are useful, but a lot are just so that social networks, etc will display rich links
+      + Lots of Open Graph keywords, which is a facebook thing
+
+
+
+**** Replacing the Open Graph stuff with something else?
++ Replace with microformats and indieweb stuff?
+  + See https://indieweb.org/The-Open-Graph-protocol
+  + https://indieweb.org/microformats
+  + https://indiewebify.me
+  + [[https://discourse.gohugo.io/t/anyone-for-webmention/10411/6][Discussion on integrating webmentions in Hugo]]
++ [ ] Might be easiest to switch my theme to something like
+  + https://themes.gohugo.io/indigo
+  + Described in detail in [[https://web-work.tools/indieweb/indigo/features/][this blog post]]
++ Another approach with a different theme in [[https://amitgawande.com/indiewebify-hugo-website/][this blog post]]
+  + This also describes how to interface with micro.blog
